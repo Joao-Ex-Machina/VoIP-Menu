@@ -2,21 +2,21 @@
 A simple IVR menu implementation for the Asterisk PBX
 
 ## Installation
-1. Get all package dependencies:
+1. Install all package dependencies:
 
-Asterisk                A complete PBX solution
+**Asterisk:** A complete PBX solution
 
-Perl                    The Perl Programming Language
+**Perl:** The Perl Programming Language
 
-perl-libwww             The World-Wide Web library for Perl
+**perl-libwww:** The World-Wide Web library for Perl
 
-perl-LWP-Protocol-https For HTTPS support
+**perl-LWP-Protocol-https:** For HTTPS support
 
-sox                     Sound eXchange, sound processing program
+**sox:** Sound eXchange, sound processing program
 
-mpg123                  MPEG Audio Player and decoder
+**mpg123:** MPEG Audio Player and decoder
 
-git                     A fast distributed version control system (needed if you are not installing the Googletts AGI from source)
+**git:** A fast distributed version control system (needed if you are not installing the Googletts AGI from source)
 
 2. If you do not have [Zaf's Asterisk Googletts AGI](https://github.com/zaf/asterisk-googletts) do:
 
