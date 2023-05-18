@@ -6,29 +6,9 @@ A simple IVR menu implementation for the Asterisk PBX
 
 **Asterisk:** A complete PBX solution
 
-**Perl:** The Perl Programming Language
+2. Clone this repo
 
-**perl-libwww:** The World-Wide Web library for Perl
-
-**perl-LWP-Protocol-https:** For HTTPS support
-
-**sox:** Sound eXchange, sound processing program
-
-**mpg123:** MPEG Audio Player and decoder
-
-**git:** A fast distributed version control system (needed if you are not installing the Googletts AGI from source)
-
-2. If you do not have [Zaf's Asterisk Googletts AGI](https://github.com/zaf/asterisk-googletts) do:
-
-```sudo make dependencies```
-
-Or install it from the source.
-
-3. Finish with:
-
-```sudo make setup```
-
-You can skip steps 2. and 3. if you do:
+3. Install!
 
 ```sudo make install```
 
@@ -44,7 +24,7 @@ You can skip steps 2. and 3. if you do:
 
 3. Using your favorite softphone (we recommend [Linphone](linphone.org)), add a new SIP account with:
 
-User: 3001
+User: 3000 OR 3001 OR 4000 OR 4001
 
 SIP domain: 127.0.0.1
 
