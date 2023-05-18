@@ -8,11 +8,12 @@ sys.stderr.write("stock.py:Starting\n")
 sys.stderr.flush()
 url = "https://www.qontigo.com/index/sxxp/"
 
+
 def read_agi_setup_variables():
-    lines = takewhile(lambda x : x.strip(), sys.stdin)
+    lines = takewhile(lambda x: x.strip(), sys.stdin)
     sys.stderr.write(f"stock.py:getting agi setup data\n")
     sys.stderr.flush()
-    variables = dict(map(lambda line :line.strip().split(':'), lines))
+    variables = dict(map(lambda line: line.strip().split(':'), lines))
     sys.stderr.write(f"stock.py:{variables}\n")
     sys.stderr.flush()
     return variables
@@ -27,7 +28,8 @@ def get_stock_price():
                 sys.stderr.flush()
                 return price
             case 200, None:
-                sys.stderr.write(f"stock.py:Failed to get SXXP Index from HTML")
+                sys.stderr.write(
+                    f"stock.py:Failed to get SXXP Index from HTML")
                 sys.stderr.flush()
                 return None
             case status, _:
@@ -45,8 +47,16 @@ def get_stock_price_from_html(html):
     return None
 
 
-
 agi_variables = read_agi_setup_variables()
 stock_price = get_stock_price()
-sys.stdout.write(f"SET VARIABLE PRICE {stock_price} ")
-sys.stdout.flush()
+if stock_price:
+    euro, cents = stock_price.split('.')
+    sys.stdout.write(f"SET VARIABLE SUCCESS TRUE\n")
+    sys.stdout.flush()
+    sys.stdout.write(f"SET VARIABLE EURO {euro}\n")
+    sys.stdout.flush()
+    sys.stdout.write(f"SET VARIABLE CENTS {cents:0<2}\n")
+    sys.stdout.flush()
+
+else:
+    sys.stdout.write(f"SET VARIABLE SUCCESS FALSE\n")
