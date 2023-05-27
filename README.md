@@ -6,6 +6,12 @@ A simple IVR menu implementation for the Asterisk PBX
 
 **Asterisk:** A complete PBX solution
 
+**python3:** Next generation of the python high-level scripting language
+
+In -Buntu/Debian systems you also need to install:
+
+**python3-venv:** Virtual enviroments for python3
+
 2. Clone this repo
 
 3. Install!
